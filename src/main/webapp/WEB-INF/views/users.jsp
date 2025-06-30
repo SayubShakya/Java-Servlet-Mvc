@@ -59,8 +59,8 @@
                 <td>${user.phoneNumber}</td>
                 <td>${user.email}</td>
                 <td>
-                    <a class="action-btn" href="edit-user?id=${user.id}">Edit</a>
-                    <a class="action-btn delete-btn" href="delete-user?id=${user.id}" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
+                    <a class="action-btn" href="${pageContext.request.contextPath}/users/edit/${user.id}">Edit</a>
+                    <a class="action-btn delete-btn" href="${pageContext.request.contextPath}/users/delete/${user.id}">Delete</a>
                 </td>
             </tr>
         </c:forEach>

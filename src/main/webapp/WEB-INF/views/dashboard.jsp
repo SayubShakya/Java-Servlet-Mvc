@@ -108,8 +108,6 @@
 
     <div class="main">
         <h1>Welcome to the Dashboard</h1>
-        <p>This is your main admin panel. Use the sidebar to manage users or perform other actions.</p>
-        <!-- You can also add charts, stats, or cards here -->
     </div>
 </div>
 

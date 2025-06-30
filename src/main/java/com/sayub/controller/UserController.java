@@ -1,9 +1,6 @@
 package com.sayub.controller;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.sayub.dto.request.RegisterUserRequest;
 import com.sayub.dto.request.UpdateUserRequest;
-import com.sayub.dto.response.ServerResponse;
 import com.sayub.dto.response.UserResponse;
 import com.sayub.entity.User;
 import com.sayub.exception.ApplicationException;
@@ -17,8 +14,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
 
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -26,7 +21,6 @@ import java.util.stream.Collectors;
 public class UserController extends Controller {
 
     private UserService userService;
-    private final ObjectMapper objectMapper = new ObjectMapper();
     private static final Logger log = Logger.getLogger(UserController.class);
 
     @Override
@@ -36,94 +30,74 @@ public class UserController extends Controller {
         this.userService = new UserServiceImpl(userRepository);
     }
 
-    public void handleResponse(HttpServletResponse response, Runnable task) {
-        try {
-            task.run();
-        } catch (ApplicationException e) {
-            log.error("ApplicationException: ", e);
-            sendErrorResponse(response, e.getStatusCode(), e.getMessage());
-        } catch (Exception e) {
-            log.error("Exception: ", e);
-            sendErrorResponse(response, HttpServletResponse.SC_INTERNAL_SERVER_ERROR,
-                    "An unexpected error occurred.");
-        }
-    }
-
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse response) {
-        handleResponse(response, () -> {
-            String pathInfo = req.getPathInfo(); //This reads what comes after /users
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
+        handleResponse(request, response, () -> {
+            String pathInfo = request.getPathInfo();
 
             if (pathInfo == null || pathInfo.equals("/")) {
                 List<UserResponse> userResponses = userService.getAllUsers().stream()
                         .map(UserResponse::new)
                         .collect(Collectors.toList());
 
-                req.setAttribute("users", userResponses);
-                view("users", req, response);
+                request.setAttribute("users", userResponses);
+                view("users", request, response);
+
+            } else if (pathInfo.startsWith("/delete/")) {
+                int id = extractIdFromPath(pathInfo.substring("/delete".length()));
+                User deletedUser = userService.deleteUser(id);
+
+                request.setAttribute("user", new UserResponse(deletedUser));
+                view("deleteUser", request, response);
 
             } else {
                 int id = extractIdFromPath(pathInfo);
                 User user = userService.getUserById(id);
-                UserResponse userResponse = new UserResponse(user);
-                sendResponse(response, HttpServletResponse.SC_OK,
-                        ServerResponse.success(userResponse, "User retrieved successfully."));
+
+                request.setAttribute("user", new UserResponse(user));
+                view("user", request, response);
             }
         });
     }
 
     @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        handleResponse(resp, () -> {
-            int id = extractIdFromPath(req.getPathInfo()); //URL is /users/3
-            UpdateUserRequest updateUserRequest;
-            try {
-                updateUserRequest = objectMapper.readValue(req.getReader(), UpdateUserRequest.class);
-            } catch (IOException e) {
-                throw new ApplicationException(403, "Invalid request data");
-            }
-            userService.updateUser(id, updateUserRequest);
-            sendResponse(resp, HttpServletResponse.SC_OK,
-                    ServerResponse.success(null, "User updated successfully."));
+    protected void doPut(HttpServletRequest request, HttpServletResponse response) {
+        handleResponse(request, response, () -> {
+            String pathInfo = request.getPathInfo();
+            int id = extractIdFromPath(pathInfo);
+
+            UpdateUserRequest updateUserRequest = null;
+            User updatedUser = userService.updateUser(id, updateUserRequest);
+
+            request.setAttribute("user", new UserResponse(updatedUser));
+            view("updateUser", request, response);
         });
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-        handleResponse(resp, () -> {
-            int id = extractIdFromPath(req.getPathInfo()); // Gets the user ID from the URL
-            userService.deleteUser(id); // Sends the ID to the service layer to validate and delete the user
-            sendResponse(resp, HttpServletResponse.SC_OK,
-                    ServerResponse.success(null, "User deleted successfully."));
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) {
+        handleResponse(request, response, () -> {
+            String pathInfo = request.getPathInfo();
+            int id = extractIdFromPath(pathInfo);
+
+            User deletedUser = userService.deleteUser(id);
+
+            request.setAttribute("user", new UserResponse(deletedUser));
+            view("deleteUser", request, response);
         });
     }
 
     private int extractIdFromPath(String pathInfo) {
-        if (pathInfo == null || pathInfo.equals("/")) { // if no id found
+        if (pathInfo == null || pathInfo.equals("/")) {
             throw new ApplicationException(HttpServletResponse.SC_BAD_REQUEST,
                     "User ID is missing in the URL path.");
         }
         try {
-            String idStr = pathInfo.substring(1); // to removes the leading / from the path. and  Now i have the ID in string form.
-            return Integer.parseInt(idStr); //Converts "5" → 5
+            String idStr = pathInfo.startsWith("/") ? pathInfo.substring(1) : pathInfo;
+            return Integer.parseInt(idStr);
         } catch (NumberFormatException e) {
-            throw new ApplicationException(HttpServletResponse.SC_BAD_REQUEST, //If the user sends something like /abc or /xyz1, it will cause an error.
+            throw new ApplicationException(HttpServletResponse.SC_BAD_REQUEST,
                     "Invalid User ID format in URL path: " + pathInfo);
         }
-    }
-
-    private void sendResponse(HttpServletResponse resp, int statusCode, ServerResponse response) {
-        resp.setStatus(statusCode);
-        resp.setContentType("application/json");
-        resp.setCharacterEncoding("UTF-8");
-        try (PrintWriter out = resp.getWriter()) {
-            out.print(objectMapper.writeValueAsString(response));
-        } catch (Exception e) {
-            log.error("Exception while writing response: ", e);
-        }
-    }
-
-    private void sendErrorResponse(HttpServletResponse resp, int statusCode, String message) {
-        sendResponse(resp, statusCode, ServerResponse.error(message, statusCode));
     }
 }

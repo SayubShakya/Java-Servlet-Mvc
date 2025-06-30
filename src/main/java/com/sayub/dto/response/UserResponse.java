@@ -1,13 +1,12 @@
 package com.sayub.dto.response;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.sayub.entity.User;
 
 public class UserResponse {
     private int id;
-    @JsonProperty("first_name") private String firstName;
-    @JsonProperty("last_name") private String lastName;
-    @JsonProperty("phone_number") private String phoneNumber;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
     private String email;
 
     public UserResponse(User user) {
@@ -18,9 +17,23 @@ public class UserResponse {
         this.email = user.getEmail();
     }
 
-    public int getId() { return id; }
-    public String getFirstName() { return firstName; }
-    public String getLastName() { return lastName; }
-    public String getPhoneNumber() { return phoneNumber; }
-    public String getEmail() { return email; }
+    public int getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }

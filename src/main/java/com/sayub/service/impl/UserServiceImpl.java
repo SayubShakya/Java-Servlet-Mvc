@@ -19,7 +19,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void updateUser(int id, UpdateUserRequest request) {
+    public User updateUser(int id, UpdateUserRequest request) {
         User existingUser = getUserById(id);
 
         existingUser.setFirstName(request.getFirstName());
@@ -31,6 +31,7 @@ public class UserServiceImpl implements UserService {
         }
 
         userRepository.update(existingUser);
+        return existingUser;
     }
 
     @Override
@@ -45,8 +46,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deleteUser(int id) {
-        getUserById(id);
+    public User deleteUser(int id) {
+        User user = getUserById(id);
         userRepository.deleteById(id);
+        return user;
     }
+
 }
