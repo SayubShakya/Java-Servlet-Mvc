@@ -19,10 +19,12 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public void register(RegisterUserRequest request) {
-        userRepository.findByEmail(request.getEmail()).orElseThrow(() -> new ApplicationException(409, "User with email " + request.getEmail() + " already exists."));
+        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+            throw new ApplicationException(409, "User with email " + request.getEmail() + " already exists.");
+        }
 
         if (!TOTPUtil.verifyCode(request.getSecretKey(), request.getTotpCode())) {
-            throw new ApplicationException(409, "Invalid Totp Code");
+            throw new ApplicationException(409, "Invalid TOTP Code");
         }
 
         User user = new User();
@@ -39,16 +41,21 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public void login(LoginUserRequest request) {
-        User user = userRepository.findByEmail(request.getEmail()).orElseThrow(() -> new ApplicationException(409, "Username/Password is not correct"));
+        User user = userRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new ApplicationException(409, "Username/Password is not correct"));
 
-        if (!user.getPassword().equals(request.getPassword())) throw new ApplicationException(409, "Username/Password is not correct");
+        if (!user.getPassword().equals(request.getPassword())) {
+            throw new ApplicationException(409, "Username/Password is not correct");
+        }
     }
 
     @Override
     public void validateTotp(TotpRequest request) {
-        User user = userRepository.findByEmail(request.getEmail()).orElseThrow(() -> new ApplicationException(409, "Username/Password is not correct"));
+        User user = userRepository.findByEmail(request.getEmail())
+                .orElseThrow(() -> new ApplicationException(409, "Username/Password is not correct"));
 
-        if (!TOTPUtil.verifyCode(user.getTotpSecretKey(), request.getTotp()))
+        if (!TOTPUtil.verifyCode(user.getTotpSecretKey(), request.getTotp())) {
             throw new ApplicationException(409, "Your OTP is not correct.");
+        }
     }
 }

@@ -58,8 +58,10 @@ public class UserController extends Controller {
                 List<UserResponse> userResponses = userService.getAllUsers().stream()
                         .map(UserResponse::new)
                         .collect(Collectors.toList());
-                sendResponse(response, HttpServletResponse.SC_OK,
-                        ServerResponse.success(userResponses, "Users retrieved successfully.")); // It means: "Get all users"
+
+                req.setAttribute("users", userResponses);
+                view("users", req, response);
+
             } else {
                 int id = extractIdFromPath(pathInfo);
                 User user = userService.getUserById(id);

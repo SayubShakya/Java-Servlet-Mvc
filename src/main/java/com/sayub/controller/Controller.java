@@ -14,9 +14,6 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 
-/**
- * @author Mnzit
- */
 public abstract class Controller extends HttpServlet {
     protected String viewPrefix = "/WEB-INF/views/";
     protected String viewSuffix = ".jsp";
