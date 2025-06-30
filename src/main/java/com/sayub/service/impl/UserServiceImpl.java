@@ -1,12 +1,10 @@
 package com.sayub.service.impl;
 
-import com.sayub.dto.request.RegisterUserRequest;
 import com.sayub.dto.request.UpdateUserRequest;
 import com.sayub.entity.User;
 import com.sayub.exception.ApplicationException;
 import com.sayub.repository.UserRepository;
 import com.sayub.service.UserService;
-import com.sayub.util.TOTPUtil;
 
 import java.util.List;
 
@@ -26,9 +24,6 @@ public class UserServiceImpl implements UserService {
         existingUser.setLastName(request.getLastName());
         existingUser.setPhoneNumber(request.getPhoneNumber());
         existingUser.setEmail(request.getEmail());
-        if (request.getPassword() != null && !request.getPassword().isEmpty()) {
-            existingUser.setPassword(request.getPassword());
-        }
 
         userRepository.update(existingUser);
         return existingUser;

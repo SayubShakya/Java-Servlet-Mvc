@@ -1,20 +1,34 @@
 package com.sayub.dto.request;
 
 public class UpdateUserRequest {
+    private int id;
     private String firstName;
     private String lastName;
     private String phoneNumber;
     private String email;
-    private String password;
 
-    public UpdateUserRequest(String email, String firstName, String lastName, String password, String phoneNumber) {
+    public UpdateUserRequest() {
+        // Default constructor
+    }
+
+    public UpdateUserRequest(int id, String email, String firstName, String lastName, String phoneNumber) {
+        this.id = id;
         this.email = email;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.password = password;
         this.phoneNumber = phoneNumber;
     }
 
+    // Add getter and setter for id
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Rest of the getters and setters remain the same
     public String getEmail() {
         return email;
     }
@@ -37,14 +51,6 @@ public class UpdateUserRequest {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getPhoneNumber() {

@@ -50,6 +50,21 @@ public class UserController extends Controller {
                 request.setAttribute("user", new UserResponse(deletedUser));
                 view("deleteUser", request, response);
 
+            } else if (pathInfo != null && pathInfo.startsWith("/update/")) {
+                int id = extractIdFromPath(pathInfo.substring("/update".length()));
+                User user = userService.getUserById(id);
+
+                UpdateUserRequest updateRequest = new UpdateUserRequest(
+                        user.getId(),
+                        user.getEmail(),
+                        user.getFirstName(),
+                        user.getLastName(),
+                        user.getPhoneNumber()
+                );
+
+                request.setAttribute("user", updateRequest);
+                view("updateUser", request, response);
+
             } else {
                 int id = extractIdFromPath(pathInfo);
                 User user = userService.getUserById(id);
@@ -61,16 +76,31 @@ public class UserController extends Controller {
     }
 
     @Override
-    protected void doPut(HttpServletRequest request, HttpServletResponse response) {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         handleResponse(request, response, () -> {
             String pathInfo = request.getPathInfo();
-            int id = extractIdFromPath(pathInfo);
 
-            UpdateUserRequest updateUserRequest = null;
-            User updatedUser = userService.updateUser(id, updateUserRequest);
+            if (pathInfo != null && pathInfo.startsWith("/update/")) {
+                int id = extractIdFromPath(pathInfo.substring("/update".length()));
 
-            request.setAttribute("user", new UserResponse(updatedUser));
-            view("updateUser", request, response);
+                String firstName = request.getParameter("firstName");
+                String lastName = request.getParameter("lastName");
+                String phoneNumber = request.getParameter("phoneNumber");
+                String email = request.getParameter("email");
+                UpdateUserRequest updateUserRequest = new UpdateUserRequest(
+                        id,
+                        email,
+                        firstName,
+                        lastName,
+                        phoneNumber
+                );
+
+                User updatedUser = userService.updateUser(id, updateUserRequest);
+
+                request.setAttribute("user", new UserResponse(updatedUser));
+                request.setAttribute("successMessage", "User updated successfully");
+                view("updateUser", request, response);
+            }
         });
     }
 

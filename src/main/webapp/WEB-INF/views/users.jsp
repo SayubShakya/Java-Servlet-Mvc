@@ -30,6 +30,19 @@
         .delete-btn {
             color: red;
         }
+        .add-user-btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .add-user-container {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -59,7 +72,7 @@
                 <td>${user.phoneNumber}</td>
                 <td>${user.email}</td>
                 <td>
-                    <a class="action-btn" href="${pageContext.request.contextPath}/users/edit/${user.id}">Edit</a>
+                    <a class="action-btn" href="${pageContext.request.contextPath}/users/update/${user.id}">Edit</a>
                     <a class="action-btn delete-btn" href="${pageContext.request.contextPath}/users/delete/${user.id}">Delete</a>
                 </td>
             </tr>

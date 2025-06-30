@@ -1,6 +1,5 @@
 package com.sayub.service;
 
-import com.sayub.dto.request.RegisterUserRequest;
 import com.sayub.dto.request.UpdateUserRequest;
 import com.sayub.entity.User;
 
