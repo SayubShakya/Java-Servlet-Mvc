@@ -9,33 +9,138 @@
     <style>
         :root {
             --primary: #4361ee;
+            --primary-light: #4895ef;
+            --secondary: #3f37c9;
+            --dark: #1b263b;
+            --light: #f8f9fa;
+            --success: #4cc9f0;
             --danger: #f72585;
+            --warning: #f8961e;
+            --info: #560bad;
             --border-radius: 8px;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f5f7fa;
-            padding: 2rem;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 10;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-info i {
+            font-size: 1.2rem;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 260px;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 0;
+            transition: var(--transition);
+        }
+
+        .sidebar-header {
+            padding: 0 1.5rem 1.5rem;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1rem;
+        }
+
+        .sidebar h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .sidebar a {
+            padding: 0.8rem 1.5rem;
+            color: #555;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: var(--transition);
+            margin: 0.2rem 1rem;
+            border-radius: var(--border-radius);
+        }
+
+        .sidebar a i {
+            width: 24px;
+            text-align: center;
+        }
+
+        .sidebar a:hover {
+            background-color: #f0f4ff;
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .sidebar a.active {
+            background-color: #e6f0ff;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .main {
+            flex: 1;
+            padding: 2rem;
+            background-color: #f5f7fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
             margin-bottom: 2rem;
+            width: 100%;
+            text-align: center;
         }
 
         .header h2 {
             color: #333;
             font-size: 1.8rem;
             font-weight: 600;
+            margin-bottom: 1rem;
         }
 
         .add-user-btn {
@@ -63,6 +168,8 @@
             box-shadow: var(--shadow);
             overflow: hidden;
             margin-bottom: 1.5rem;
+            width: 100%;
+            max-width: 1200px;
         }
 
         table {
@@ -125,6 +232,8 @@
             text-align: center;
             padding: 3rem;
             color: #777;
+            width: 100%;
+            max-width: 1200px;
         }
 
         .empty-state i {
@@ -135,9 +244,10 @@
 
         .action-buttons {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             margin-top: 1rem;
+            width: 100%;
         }
 
         .dashboard-btn {
@@ -158,64 +268,133 @@
             transform: translateY(-2px);
             box-shadow: var(--shadow);
         }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                position: fixed;
+                top: 0;
+                left: -260px;
+                height: 100vh;
+                z-index: 100;
+                background: white;
+            }
+
+            .sidebar.active {
+                left: 0;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .main {
+                padding: 1rem;
+                margin-top: 70px;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                color: white;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <h2><i class="fas fa-users"></i> Users Management</h2>
-        <a href="${pageContext.request.contextPath}/users/new" class="add-user-btn">
-            <i class="fas fa-plus"></i> Add New User
-        </a>
-    </div>
 
-    <c:if test="${empty users}">
-        <div class="table-container empty-state">
-            <i class="fas fa-user-slash"></i>
-            <h3>No Users Found</h3>
-            <p>There are currently no users in the system.</p>
-        </div>
-    </c:if>
-
-    <c:if test="${not empty users}">
-        <div class="table-container">
-            <table>
-                <thead>
-                <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Phone Number</th>
-                    <th>Email</th>
-                    <th>Actions</th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="user" items="${users}">
-                    <tr>
-                        <td>${user.firstName}</td>
-                        <td>${user.lastName}</td>
-                        <td>${user.phoneNumber}</td>
-                        <td>${user.email}</td>
-                        <td>
-                            <a class="action-btn edit-btn" href="${pageContext.request.contextPath}/users/update/${user.id}">
-                                <i class="fas fa-edit"></i> Edit
-                            </a>
-                            <a class="action-btn delete-btn" href="${pageContext.request.contextPath}/users/delete/${user.id}">
-                                <i class="fas fa-trash-alt"></i> Delete
-                            </a>
-                        </td>
-                    </tr>
-                </c:forEach>
-                </tbody>
-            </table>
-        </div>
-    </c:if>
-
-    <div class="action-buttons">
-        <a href="${pageContext.request.contextPath}/dashboard" class="dashboard-btn">
-            <i class="fas fa-arrow-left"></i> Back to Dashboard
-        </a>
+<div class="navbar">
+    <button class="mobile-menu-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="user-info">
+        <i class="fas fa-user-circle"></i>
+        <span>${sessionScope.email}</span>
     </div>
 </div>
+
+<div class="container">
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+        </div>
+        <a href="users" class="active">
+            <i class="fas fa-users"></i> Users
+        </a>
+        <a href="logout">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h2><i class="fas fa-users"></i> Users Management</h2>
+        </div>
+
+        <c:if test="${empty users}">
+            <div class="table-container empty-state">
+                <i class="fas fa-user-slash"></i>
+                <h3>No Users Found</h3>
+                <p>There are currently no users in the system.</p>
+            </div>
+        </c:if>
+
+        <c:if test="${not empty users}">
+            <div class="table-container">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="user" items="${users}">
+                        <tr>
+                            <td>${user.firstName}</td>
+                            <td>${user.lastName}</td>
+                            <td>${user.phoneNumber}</td>
+                            <td>${user.email}</td>
+                            <td>
+                                <a class="action-btn edit-btn" href="${pageContext.request.contextPath}/users/update/${user.id}">
+                                    <i class="fas fa-edit"></i> Edit
+                                </a>
+                                <a class="action-btn delete-btn" href="${pageContext.request.contextPath}/users/delete/${user.id}">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
+                            </td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </div>
+        </c:if>
+
+        <div class="action-buttons">
+            <a href="${pageContext.request.contextPath}/dashboard" class="dashboard-btn">
+                <i class="fas fa-arrow-left"></i> Back to Dashboard
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleSidebar() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('active');
+    }
+</script>
+
 </body>
 </html>
