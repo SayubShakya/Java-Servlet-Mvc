@@ -7,8 +7,6 @@ import com.sayub.entity.User;
 
 public interface AuthService {
     void register(RegisterUserRequest request);
-
-    void login(LoginUserRequest request);
-
+    User login(LoginUserRequest request);
     User validateTotp(TotpRequest request);
 }

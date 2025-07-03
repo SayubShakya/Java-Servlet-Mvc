@@ -1,7 +1,6 @@
 package com.sayub.dto.request;
 
 public class RegisterUserRequest {
-
     private String firstName;
     private String lastName;
     private String phoneNumber;
@@ -9,8 +8,9 @@ public class RegisterUserRequest {
     private String password;
     private String secretKey;
     private String totpCode;
+    private int roleId;
 
-    public RegisterUserRequest(String firstName, String lastName, String phoneNumber, String email, String password, String secretKey, String totpCode) {
+    public RegisterUserRequest(String firstName, String lastName, String phoneNumber, String email, String password, String secretKey, String totpCode, int roleId) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
@@ -18,6 +18,7 @@ public class RegisterUserRequest {
         this.password = password;
         this.secretKey = secretKey;
         this.totpCode = totpCode;
+        this.roleId = roleId;
     }
 
     public String getLastName() {
@@ -74,5 +75,13 @@ public class RegisterUserRequest {
 
     public void setTotpCode(String totpCode) {
         this.totpCode = totpCode;
+    }
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 }

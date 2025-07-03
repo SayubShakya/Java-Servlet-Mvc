@@ -7,6 +7,7 @@ public class User {
     private String phoneNumber;
     private String email;
     private String password;
+    private int roleId;
     private boolean isActive;
     private String totpSecretKey;
 
@@ -56,6 +57,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
     public boolean isActive() {

@@ -5,12 +5,10 @@ import com.sayub.db.DatabaseConnector;
 import com.sayub.db.query.RowMapper;
 import com.sayub.entity.User;
 import com.sayub.repository.UserRepository;
-
 import java.util.List;
 import java.util.Optional;
 
 public class UserRepositoryImpl implements UserRepository {
-
     private static final RowMapper<User> USER_ROW_MAPPER = rs -> {
         User user = new User();
         user.setId(rs.getInt("id"));
@@ -19,6 +17,7 @@ public class UserRepositoryImpl implements UserRepository {
         user.setPhoneNumber(rs.getString("phone_number"));
         user.setEmail(rs.getString("email"));
         user.setPassword(rs.getString("password"));
+        user.setRoleId(rs.getInt("role_id"));
         user.setActive(rs.getBoolean("is_active"));
         user.setTotpSecretKey(rs.getString("totp_secret_key"));
         return user;
@@ -28,14 +27,15 @@ public class UserRepositoryImpl implements UserRepository {
     public void save(User user) {
         DatabaseConnector.update(Users.SAVE,
                 user.getFirstName(), user.getLastName(), user.getPhoneNumber(),
-                user.getEmail(), user.getPassword(), user.isActive(), user.getTotpSecretKey());
+                user.getEmail(), user.getPassword(), user.getRoleId(),
+                user.isActive(), user.getTotpSecretKey());
     }
 
     @Override
     public void update(User user) {
         DatabaseConnector.update(Users.UPDATE,
                 user.getFirstName(), user.getLastName(), user.getPhoneNumber(),
-                user.getEmail(), user.getPassword(), user.getId());
+                user.getEmail(), user.getPassword(), user.getRoleId(), user.getId());
     }
 
     @Override

@@ -8,7 +8,6 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-// This filter will run for all requests to /welcome and other protected pages
 @WebFilter(urlPatterns = {"/*"}) // Add more as needed
 public class AuthFilter implements Filter {
 
@@ -43,12 +42,12 @@ public class AuthFilter implements Filter {
 
 
         if(!loggedIn && isLoginRequest){
-            chain.doFilter(request, response); // Proceed
+            chain.doFilter(request, response);
             return;
         }
 
         if (loggedIn) {
-            chain.doFilter(request, response); // Proceed
+            chain.doFilter(request, response);
         } else {
             res.sendRedirect("login");
         }

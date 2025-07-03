@@ -19,7 +19,6 @@ public class UpdateUserRequest {
         this.phoneNumber = phoneNumber;
     }
 
-    // Add getter and setter for id
     public int getId() {
         return id;
     }
@@ -28,7 +27,6 @@ public class UpdateUserRequest {
         this.id = id;
     }
 
-    // Rest of the getters and setters remain the same
     public String getEmail() {
         return email;
     }

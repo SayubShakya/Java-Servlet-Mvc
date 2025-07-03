@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="https://jakarta.ee/xml/ns/jakartaee/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +31,7 @@
         .register-box h2 {
             margin-bottom: 1.2rem;
         }
-        .register-box input {
+        .register-box input, .register-box select {
             width: 100%;
             padding: 0.5rem;
             margin: 0.4rem 0;
@@ -62,6 +62,12 @@
     <input type="email" name="email" placeholder="Email" required>
     <input type="password" name="password" placeholder="Password" required>
     <input type="text" name="phoneNo" placeholder="Phone Number" required>
+    <select name="roleId" required>
+        <option value="">Select Role</option>
+        <c:forEach items="${requestScope.roles}" var="role">
+            <option value="${role.id}">${role.name}</option>
+        </c:forEach>
+    </select>
     <input type="text" name="totpCode" placeholder="Enter TOTP Code" required>
     <input type="text" hidden name="secretKey" value="${requestScope.secretKey}">
     <button type="submit">Register</button>

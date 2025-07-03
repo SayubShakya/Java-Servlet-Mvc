@@ -4,11 +4,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Admin Dashboard</title>
+    <title>Viewer Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Same CSS as Admin Dashboard */
         :root {
             --primary: #4361ee;
             --primary-light: #4895ef;
@@ -199,10 +200,6 @@
            class="${pageContext.request.requestURI.endsWith('/dashboard') ? 'active' : ''}">
             <i class="fas fa-tachometer-alt"></i> Dashboard
         </a>
-        <a href="${pageContext.request.contextPath}/users"
-           class="${pageContext.request.requestURI.contains('/users') ? 'active' : ''}">
-            <i class="fas fa-users"></i> Users
-        </a>
         <a href="${pageContext.request.contextPath}/profile"
            class="${pageContext.request.requestURI.contains('/profile') ? 'active' : ''}">
             <i class="fas fa-user-circle"></i> Profile
@@ -214,8 +211,8 @@
 
     <div class="main">
         <div class="card welcome-card">
-            <h1>Welcome to Admin Dashboard</h1>
-            <p>Manage your application users and settings from this centralized control panel</p>
+            <h1>Welcome to Viewer Dashboard</h1>
+            <p>View reports and analytics from this control panel</p>
         </div>
     </div>
 </div>

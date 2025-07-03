@@ -29,6 +29,14 @@ public abstract class Controller extends HttpServlet {
         }
     }
 
+    protected void redirect(HttpServletResponse response, String page) {
+        try {
+            response.sendRedirect(page);
+        } catch (IOException e) {
+            System.out.println("IOException: " + e);
+        }
+    }
+
     protected void handleResponse(HttpServletRequest request, HttpServletResponse response, Runnable task) {
         try {
             task.run();

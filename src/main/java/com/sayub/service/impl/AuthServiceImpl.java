@@ -10,7 +10,6 @@ import com.sayub.service.AuthService;
 import com.sayub.util.TOTPUtil;
 
 public class AuthServiceImpl implements AuthService {
-
     private final UserRepository userRepository;
 
     public AuthServiceImpl(UserRepository userRepository) {
@@ -33,6 +32,7 @@ public class AuthServiceImpl implements AuthService {
         user.setPhoneNumber(request.getPhoneNumber());
         user.setEmail(request.getEmail());
         user.setPassword(request.getPassword());
+        user.setRoleId(request.getRoleId());
         user.setTotpSecretKey(request.getSecretKey());
         user.setActive(true);
 
@@ -40,13 +40,15 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public void login(LoginUserRequest request) {
+    public User login(LoginUserRequest request) {
         User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new ApplicationException(409, "Username/Password is not correct"));
 
         if (!user.getPassword().equals(request.getPassword())) {
             throw new ApplicationException(409, "Username/Password is not correct");
         }
+
+        return user;
     }
 
     @Override

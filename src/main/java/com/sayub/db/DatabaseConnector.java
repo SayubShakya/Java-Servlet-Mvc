@@ -36,6 +36,24 @@ public class DatabaseConnector {
         }
     }
 
+    public static int updateWithGeneratedKeys(String sql, Object... params) {
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+            setParameters(stmt, params);
+            stmt.executeUpdate();
+
+            try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    return generatedKeys.getInt(1);
+                }
+            }
+            throw new RuntimeException("No generated key returned");
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Database update failed for query: " + sql, e);
+        }
+    }
+
     public static <T> Optional<T> queryOne(String sql, RowMapper<T> rowMapper, Object... params) {
         try (Connection conn = getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {

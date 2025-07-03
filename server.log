@@ -7272,3 +7272,640 @@ com.sayub.exception.ApplicationException: Your OTP is not correct.
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2025-07-01 18:20:52.419 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 14:06:30.469 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 14:06:30.982 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 14:06:31.228 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 14:06:31.261 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 14:06:31.338 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@bef2d72{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 14:06:31.443 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@59ec2012{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 14:06:31.447 INFO  org.eclipse.jetty.server.Server:439 - Started Server@396e2f39{STARTING}[11.0.15,sto=0] @1901ms
+2025-07-03 14:07:23.404 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 15:29:29.929 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 15:29:30.511 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 15:29:30.666 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 15:29:30.705 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 15:29:30.809 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@73a1e9a9{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 15:29:30.884 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@335eadca{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 15:29:30.886 INFO  org.eclipse.jetty.server.Server:439 - Started Server@69379752{STARTING}[11.0.15,sto=0] @1559ms
+2025-07-03 15:29:34.576 INFO  com.sayub.controller.RoleController:31 - RoleServlet init
+2025-07-03 15:29:56.612 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 15:33:35.227 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 15:33:35.622 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 15:33:35.776 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 15:33:35.830 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 15:33:35.866 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@bef2d72{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 15:33:35.927 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@59ec2012{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 15:33:35.929 INFO  org.eclipse.jetty.server.Server:439 - Started Server@396e2f39{STARTING}[11.0.15,sto=0] @1340ms
+2025-07-03 15:33:45.080 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 15:34:08.701 INFO  com.sayub.controller.RoleController:31 - RoleServlet init
+2025-07-03 16:41:21.560 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 16:41:22.421 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 16:41:22.675 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 16:41:22.749 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 16:41:22.841 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@3590fc5b{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 16:41:22.942 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@6ddf90b0{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 16:41:22.946 INFO  org.eclipse.jetty.server.Server:439 - Started Server@48a242ce{STARTING}[11.0.15,sto=0] @2126ms
+2025-07-03 16:41:51.569 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 16:41:52.380 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 16:41:52.654 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 16:41:52.731 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 16:41:52.825 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@76908cc0{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 16:41:52.947 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@1ce92674{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 16:41:52.953 INFO  org.eclipse.jetty.server.Server:439 - Started Server@4fb64261{STARTING}[11.0.15,sto=0] @2529ms
+2025-07-03 16:47:58.367 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 16:47:58.972 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 16:47:59.185 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 16:47:59.241 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 16:47:59.294 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@3d680b5a{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 16:47:59.425 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@72d818d1{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 16:47:59.430 INFO  org.eclipse.jetty.server.Server:439 - Started Server@401e7803{STARTING}[11.0.15,sto=0] @2075ms
+2025-07-03 16:57:22.562 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 16:57:23.184 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 16:57:23.358 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 16:57:23.408 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 16:57:23.474 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@17046283{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 16:57:23.564 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@5649fd9b{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 16:57:23.567 INFO  org.eclipse.jetty.server.Server:439 - Started Server@481a15ff{STARTING}[11.0.15,sto=0] @1746ms
+2025-07-03 16:59:17.272 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 17:23:00.133 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:23:00.460 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:23:00.564 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:23:00.589 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:23:00.617 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@31d7b7bf{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:23:00.659 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@2038ae61{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:23:00.661 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5c18298f{STARTING}[11.0.15,sto=0] @953ms
+2025-07-03 17:23:36.118 ERROR com.sayub.controller.Controller:36 - ApplicationException: 
+com.sayub.exception.ApplicationException: Your OTP is not correct.
+	at com.sayub.service.impl.AuthServiceImpl.validateTotp(AuthServiceImpl.java:60)
+	at com.sayub.controller.TotpController.lambda$doPost$1(TotpController.java:51)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.TotpController.doPost(TotpController.java:46)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:520)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:29)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:23:51.255 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 17:24:34.492 ERROR com.sayub.controller.LoginController:36 - Exception: 
+java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.HttpChannel.resetBuffer(HttpChannel.java:1139)
+	at org.eclipse.jetty.server.HttpOutput.resetBuffer(HttpOutput.java:1420)
+	at org.eclipse.jetty.server.Response.resetBuffer(Response.java:1274)
+	at org.eclipse.jetty.server.Response.resetForForward(Response.java:1267)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:142)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:135)
+	at com.sayub.controller.Controller.view(Controller.java:24)
+	at com.sayub.controller.LoginController.lambda$doGet$0(LoginController.java:34)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.LoginController.doGet(LoginController.java:32)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:50)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:24:45.667 ERROR com.sayub.controller.LoginController:36 - Exception: 
+java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.HttpChannel.resetBuffer(HttpChannel.java:1139)
+	at org.eclipse.jetty.server.HttpOutput.resetBuffer(HttpOutput.java:1420)
+	at org.eclipse.jetty.server.Response.resetBuffer(Response.java:1274)
+	at org.eclipse.jetty.server.Response.resetForForward(Response.java:1267)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:142)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:135)
+	at com.sayub.controller.Controller.view(Controller.java:24)
+	at com.sayub.controller.LoginController.lambda$doGet$0(LoginController.java:34)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.LoginController.doGet(LoginController.java:32)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:50)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:25:07.364 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:25:07.699 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:25:07.815 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:25:07.843 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:25:07.880 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@6580cfdd{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:25:07.926 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@2038ae61{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:25:07.929 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5c18298f{STARTING}[11.0.15,sto=0] @1027ms
+2025-07-03 17:25:36.463 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:25:36.864 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:25:37.001 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:25:37.032 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:25:37.072 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@35ef1869{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:25:37.121 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@520a3426{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:25:37.122 INFO  org.eclipse.jetty.server.Server:439 - Started Server@768b970c{STARTING}[11.0.15,sto=0] @1171ms
+2025-07-03 17:25:54.636 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 17:29:43.512 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:29:43.825 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:29:43.935 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:29:43.978 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:29:44.036 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@c267ef4{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:29:44.088 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@2038ae61{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:29:44.089 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5c18298f{STARTING}[11.0.15,sto=0] @1062ms
+2025-07-03 17:30:03.632 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:30:03.994 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:30:04.114 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:30:04.147 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:30:04.183 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@2e4b8173{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:30:04.239 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@4bec1f0c{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:30:04.241 INFO  org.eclipse.jetty.server.Server:439 - Started Server@710726a3{STARTING}[11.0.15,sto=0] @1107ms
+2025-07-03 17:30:13.124 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:30:13.432 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:30:13.539 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:30:13.582 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:30:13.618 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@3f197a46{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:30:13.668 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@21213b92{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:30:13.670 INFO  org.eclipse.jetty.server.Server:439 - Started Server@2fd66ad3{STARTING}[11.0.15,sto=0] @1016ms
+2025-07-03 17:30:24.320 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:30:24.746 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:30:24.878 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:30:24.905 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:30:24.945 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@654f0d9c{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:30:24.998 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@2038ae61{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:30:25.000 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5c18298f{STARTING}[11.0.15,sto=0] @1183ms
+2025-07-03 17:31:15.121 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 17:32:07.425 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:32:07.724 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:32:07.824 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:32:07.857 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:32:07.894 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@636be97c{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:32:07.947 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@a67c67e{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:32:07.949 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5d11346a{STARTING}[11.0.15,sto=0] @962ms
+2025-07-03 17:32:41.091 ERROR com.sayub.controller.Controller:36 - ApplicationException: 
+com.sayub.exception.ApplicationException: Your OTP is not correct.
+	at com.sayub.service.impl.AuthServiceImpl.validateTotp(AuthServiceImpl.java:60)
+	at com.sayub.controller.TotpController.lambda$doPost$1(TotpController.java:51)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.TotpController.doPost(TotpController.java:46)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:520)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:29)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:32:53.150 INFO  com.sayub.controller.UserController:28 - UserServlet init
+2025-07-03 17:33:22.472 ERROR com.sayub.controller.Controller:36 - ApplicationException: 
+com.sayub.exception.ApplicationException: Your OTP is not correct.
+	at com.sayub.service.impl.AuthServiceImpl.validateTotp(AuthServiceImpl.java:60)
+	at com.sayub.controller.TotpController.lambda$doPost$1(TotpController.java:51)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.TotpController.doPost(TotpController.java:46)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:520)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:29)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:33:30.382 ERROR com.sayub.controller.LoginController:36 - Exception: 
+java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.HttpChannel.resetBuffer(HttpChannel.java:1139)
+	at org.eclipse.jetty.server.HttpOutput.resetBuffer(HttpOutput.java:1420)
+	at org.eclipse.jetty.server.Response.resetBuffer(Response.java:1274)
+	at org.eclipse.jetty.server.Response.resetForForward(Response.java:1267)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:142)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:135)
+	at com.sayub.controller.Controller.view(Controller.java:24)
+	at com.sayub.controller.LoginController.lambda$doGet$0(LoginController.java:34)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.LoginController.doGet(LoginController.java:32)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:50)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:33:34.749 ERROR com.sayub.controller.LoginController:36 - Exception: 
+java.lang.IllegalStateException: Committed
+	at org.eclipse.jetty.server.HttpChannel.resetBuffer(HttpChannel.java:1139)
+	at org.eclipse.jetty.server.HttpOutput.resetBuffer(HttpOutput.java:1420)
+	at org.eclipse.jetty.server.Response.resetBuffer(Response.java:1274)
+	at org.eclipse.jetty.server.Response.resetForForward(Response.java:1267)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:142)
+	at org.eclipse.jetty.server.Dispatcher.forward(Dispatcher.java:135)
+	at com.sayub.controller.Controller.view(Controller.java:24)
+	at com.sayub.controller.LoginController.lambda$doGet$0(LoginController.java:34)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.LoginController.doGet(LoginController.java:32)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:50)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:34:18.795 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:34:19.130 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:34:19.247 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:34:19.281 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:34:19.318 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@654f0d9c{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:34:19.367 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@1e127982{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:34:19.370 INFO  org.eclipse.jetty.server.Server:439 - Started Server@fcd6521{STARTING}[11.0.15,sto=0] @1002ms
+2025-07-03 17:34:33.214 ERROR com.sayub.controller.Controller:36 - ApplicationException: 
+com.sayub.exception.ApplicationException: Your OTP is not correct.
+	at com.sayub.service.impl.AuthServiceImpl.validateTotp(AuthServiceImpl.java:60)
+	at com.sayub.controller.TotpController.lambda$doPost$1(TotpController.java:51)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.TotpController.doPost(TotpController.java:46)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:520)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:29)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:34:54.151 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:34:54.494 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:34:54.604 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:34:54.637 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:34:54.669 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@17046283{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:34:54.715 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@4bec1f0c{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:34:54.717 INFO  org.eclipse.jetty.server.Server:439 - Started Server@710726a3{STARTING}[11.0.15,sto=0] @1053ms
+2025-07-03 17:36:20.409 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:36:20.714 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:36:20.834 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:36:20.866 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:36:20.898 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@29626d54{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:36:20.944 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@5649fd9b{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:36:20.946 INFO  org.eclipse.jetty.server.Server:439 - Started Server@481a15ff{STARTING}[11.0.15,sto=0] @942ms
+2025-07-03 17:36:39.829 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:36:40.207 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:36:40.336 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:36:40.367 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:36:40.407 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@635eaaf1{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:36:40.457 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@2038ae61{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:36:40.460 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5c18298f{STARTING}[11.0.15,sto=0] @1098ms
+2025-07-03 17:36:49.516 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:36:49.875 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:36:49.986 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:36:50.019 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:36:50.062 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@635eaaf1{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:36:50.111 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@2038ae61{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:36:50.113 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5c18298f{STARTING}[11.0.15,sto=0] @1033ms
+2025-07-03 17:36:55.263 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:36:55.609 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:36:55.721 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:36:55.758 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:36:55.802 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@41e36e46{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:36:55.852 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@6fc6f14e{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:36:55.854 INFO  org.eclipse.jetty.server.Server:439 - Started Server@68ceda24{STARTING}[11.0.15,sto=0] @1128ms
+2025-07-03 17:37:07.074 ERROR com.sayub.controller.Controller:36 - ApplicationException: 
+com.sayub.exception.ApplicationException: Your OTP is not correct.
+	at com.sayub.service.impl.AuthServiceImpl.validateTotp(AuthServiceImpl.java:60)
+	at com.sayub.controller.TotpController.lambda$doPost$1(TotpController.java:51)
+	at com.sayub.controller.Controller.handleResponse(Controller.java:34)
+	at com.sayub.controller.TotpController.doPost(TotpController.java:46)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:520)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder$NotAsync.service(ServletHolder.java:1419)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1665)
+	at com.sayub.filter.AuthFilter.doFilter(AuthFilter.java:31)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:210)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1635)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:527)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:131)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:578)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:223)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1570)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1381)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1543)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1303)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:416)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:385)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:272)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.lambda$new$0(AdaptiveExecutionStrategy.java:140)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:411)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:969)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1194)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1149)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-03 17:37:34.899 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:37:35.226 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:37:35.340 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:37:35.363 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:37:35.390 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@636be97c{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:37:35.440 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@66480dd7{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:37:35.442 INFO  org.eclipse.jetty.server.Server:439 - Started Server@b3d7190{STARTING}[11.0.15,sto=0] @987ms
+2025-07-03 17:40:14.792 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:40:15.122 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:40:15.237 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:40:15.268 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:40:15.306 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@654f0d9c{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:40:15.357 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@2038ae61{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:40:15.360 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5c18298f{STARTING}[11.0.15,sto=0] @1003ms
+2025-07-03 17:40:27.864 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:40:28.186 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:40:28.300 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:40:28.338 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:40:28.378 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@5bd03f44{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:40:28.432 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@29ca901e{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:40:28.434 INFO  org.eclipse.jetty.server.Server:439 - Started Server@646007f4{STARTING}[11.0.15,sto=0] @1009ms
+2025-07-03 17:40:50.920 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:40:51.249 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:40:51.354 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:40:51.390 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:40:51.424 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@3f197a46{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:40:51.465 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@21213b92{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:40:51.467 INFO  org.eclipse.jetty.server.Server:439 - Started Server@2fd66ad3{STARTING}[11.0.15,sto=0] @994ms
+2025-07-03 17:40:58.097 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:40:58.499 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:40:58.607 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:40:58.641 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:40:58.679 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@4f209819{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:40:58.721 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@71423665{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:40:58.723 INFO  org.eclipse.jetty.server.Server:439 - Started Server@3b94d659{STARTING}[11.0.15,sto=0] @1119ms
+2025-07-03 17:41:27.717 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-03 17:41:28.091 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-03 17:41:28.200 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-03 17:41:28.224 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-03 17:41:28.260 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@654f0d9c{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
+2025-07-03 17:41:28.318 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@2038ae61{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-03 17:41:28.321 INFO  org.eclipse.jetty.server.Server:439 - Started Server@5c18298f{STARTING}[11.0.15,sto=0] @1061ms
