@@ -3,11 +3,12 @@ package com.sayub.service;
 import com.sayub.dto.request.LoginUserRequest;
 import com.sayub.dto.request.RegisterUserRequest;
 import com.sayub.dto.request.TotpRequest;
+import com.sayub.entity.User;
 
 public interface AuthService {
     void register(RegisterUserRequest request);
 
     void login(LoginUserRequest request);
 
-    void validateTotp(TotpRequest request);
+    User validateTotp(TotpRequest request);
 }

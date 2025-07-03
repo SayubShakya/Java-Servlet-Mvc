@@ -70,7 +70,7 @@ public class UserController extends Controller {
                 User user = userService.getUserById(id);
 
                 request.setAttribute("user", new UserResponse(user));
-                view("user", request, response);
+                view("users", request, response);
             }
         });
     }

@@ -244,6 +244,11 @@
       .sidebar.active {
         left: 0;
       }
+      .sidebar a.active {
+        background-color: #e6f0ff;
+        color: var(--primary);
+        font-weight: 500;
+      }
 
       .container {
         flex-direction: column;
@@ -279,19 +284,25 @@
   </button>
   <div class="user-info">
     <i class="fas fa-user-circle"></i>
-    <span>${sessionScope.email}</span>
+    <span>${sessionScope.loggedInUser.email}</span>
   </div>
 </div>
 
 <div class="container">
   <div class="sidebar" id="sidebar">
-    <div class="sidebar-header">
-      <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
-    </div>
-    <a href="users" class="active">
+    <a href="${pageContext.request.contextPath}/dashboard"
+       class="${pageContext.request.requestURI.endsWith('/dashboard.jsp') || pageContext.request.requestURI.endsWith('/dashboard') ? 'active' : ''}">
+      <i class="fas fa-tachometer-alt"></i> Dashboard
+    </a>
+    <a href="${pageContext.request.contextPath}/profile"
+       class="${pageContext.request.requestURI.endsWith('/profile') ? 'active' : ''}">
+      <i class="fas fa-user-circle"></i> Profile
+    </a>
+    <a href="${pageContext.request.contextPath}/users"
+       class="${pageContext.request.requestURI.endsWith('/users') ? 'active' : ''}">
       <i class="fas fa-users"></i> Users
     </a>
-    <a href="logout">
+    <a href="${pageContext.request.contextPath}/logout">
       <i class="fas fa-sign-out-alt"></i> Logout
     </a>
   </div>

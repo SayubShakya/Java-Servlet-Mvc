@@ -50,6 +50,8 @@ public class LoginController extends Controller {
             User user = userRepository.findByEmail(email)
                     .orElseThrow(() -> new RuntimeException("User not found"));
 
+            request.getSession().setAttribute("loggedInUser", user);
+
             String otpCode = TOTPUtil.getTOTPCode(user.getTotpSecretKey());
             System.out.println("Generated OTP for user " + email + ": " + otpCode);
 

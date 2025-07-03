@@ -50,12 +50,14 @@ public class AuthServiceImpl implements AuthService {
     }
 
     @Override
-    public void validateTotp(TotpRequest request) {
+    public User validateTotp(TotpRequest request) {
         User user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow(() -> new ApplicationException(409, "Username/Password is not correct"));
 
         if (!TOTPUtil.verifyCode(user.getTotpSecretKey(), request.getTotp())) {
             throw new ApplicationException(409, "Your OTP is not correct.");
         }
+
+        return user;
     }
 }

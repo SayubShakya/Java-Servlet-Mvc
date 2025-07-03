@@ -1,4 +1,3 @@
-<%--dashboard.jsp--%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
@@ -78,18 +77,6 @@
             flex-direction: column;
             padding: 2rem 0;
             transition: var(--transition);
-        }
-
-        .sidebar-header {
-            padding: 0 1.5rem 1.5rem;
-            border-bottom: 1px solid #eee;
-            margin-bottom: 1rem;
-        }
-
-        .sidebar h2 {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: 600;
         }
 
         .sidebar a {
@@ -196,26 +183,31 @@
     </style>
 </head>
 <body>
-
 <div class="navbar">
     <button class="mobile-menu-btn" onclick="toggleSidebar()">
         <i class="fas fa-bars"></i>
     </button>
     <div class="user-info">
         <i class="fas fa-user-circle"></i>
-        <span>${sessionScope.email}</span>
+        <span>${sessionScope.loggedInUser.email}</span>
     </div>
 </div>
 
 <div class="container">
     <div class="sidebar" id="sidebar">
-        <div class="sidebar-header">
-            <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
-        </div>
-        <a href="users" class="active">
+        <a href="${pageContext.request.contextPath}/dashboard"
+           class="${pageContext.request.requestURI.endsWith('/dashboard.jsp') || pageContext.request.requestURI.endsWith('/dashboard') ? 'active' : ''}">
+            <i class="fas fa-tachometer-alt"></i> Dashboard
+        </a>
+        <a href="${pageContext.request.contextPath}/profile"
+           class="${pageContext.request.requestURI.endsWith('/profile') || pageContext.request.requestURI.contains('/profile') ? 'active' : ''}">
+            <i class="fas fa-user-circle"></i> Profile
+        </a>
+        <a href="${pageContext.request.contextPath}/users"
+           class="${pageContext.request.requestURI.endsWith('/users') || pageContext.request.requestURI.contains('/users/') ? 'active' : ''}">
             <i class="fas fa-users"></i> Users
         </a>
-        <a href="logout">
+        <a href="${pageContext.request.contextPath}/logout">
             <i class="fas fa-sign-out-alt"></i> Logout
         </a>
     </div>
@@ -230,10 +222,8 @@
 
 <script>
     function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        sidebar.classList.toggle('active');
+        document.getElementById('sidebar').classList.toggle('active');
     }
 </script>
-
 </body>
 </html>

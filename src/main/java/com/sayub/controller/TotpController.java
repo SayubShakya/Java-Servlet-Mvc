@@ -1,10 +1,13 @@
 package com.sayub.controller;
 
 import com.sayub.dto.request.TotpRequest;
+import com.sayub.entity.User;
 import com.sayub.repository.UserRepository;
 import com.sayub.repository.impl.UserRepositoryImpl;
 import com.sayub.service.AuthService;
+import com.sayub.service.UserService;
 import com.sayub.service.impl.AuthServiceImpl;
+import com.sayub.service.impl.UserServiceImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -45,10 +48,10 @@ public class TotpController extends Controller {
             String email = request.getParameter("email");
             String totp = request.getParameter("totp");
 
-            authService.validateTotp(new TotpRequest(email, totp));
-
+            User user = authService.validateTotp(new TotpRequest(email, totp));
             HttpSession session = request.getSession();
             session.setAttribute("email", email);
+            session.setAttribute("currentUser", user);
 
             view("dashboard", request, response);
         });

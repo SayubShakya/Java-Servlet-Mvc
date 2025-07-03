@@ -1,9 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
-<html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>User Deleted</title>
+    <meta charset="UTF-8">
+    <title>User Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -122,74 +124,91 @@
             flex: 1;
             padding: 2rem;
             background-color: #f5f7fa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .card {
             background: white;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
-            padding: 2.5rem;
-            max-width: 500px;
-            width: 100%;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-card {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .profile-header {
+            margin-bottom: 2rem;
             text-align: center;
         }
 
-        .icon {
-            font-size: 3rem;
-            color: var(--danger);
+        .profile-header h1 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .detail-item {
             margin-bottom: 1rem;
         }
 
-        .title {
-            font-size: 1.5rem;
+        .label {
             font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--danger);
+            color: var(--dark);
+            display: block;
+            margin-bottom: 0.3rem;
         }
 
-        .user-details {
-            text-align: left;
-            background: #f9f9f9;
-            padding: 1.5rem;
+        .value {
+            padding: 0.8rem;
+            background-color: var(--light);
             border-radius: var(--border-radius);
-            margin: 1.5rem 0;
+            display: block;
         }
 
-        .user-details p {
-            margin: 0.8rem 0;
-            display: flex;
-        }
-
-        .user-details strong {
-            min-width: 120px;
+        .btn {
             display: inline-block;
-            color: #555;
-        }
-
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 0.6rem 1.2rem;
+            padding: 0.8rem 1.5rem;
             background-color: var(--primary);
             color: white;
             text-decoration: none;
             border-radius: var(--border-radius);
-            transition: all 0.3s ease;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-family: inherit;
         }
 
-        .back-btn:hover {
-            background-color: #3a56d4;
+        .btn:hover {
+            background-color: var(--secondary);
             transform: translateY(-2px);
         }
-        .sidebar a.active {
-            background-color: #e6f0ff;
-            color: var(--primary);
-            font-weight: 500;
+
+        .btn-danger {
+            background-color: var(--danger);
+            margin-left: 1rem;
+        }
+
+        .btn-danger:hover {
+            background-color: #d11a66;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         @media (max-width: 768px) {
@@ -222,6 +241,14 @@
                 color: white;
                 font-size: 1.5rem;
                 cursor: pointer;
+            }
+            .sidebar a.active {
+                background-color: #e6f0ff;
+                color: var(--primary);
+                font-weight: 500;
+            }
+            .profile-details {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -264,30 +291,50 @@
     </div>
 
     <div class="main">
-        <div class="card">
-            <div class="icon">
-                <i class="fas fa-trash-alt"></i>
-            </div>
-            <h1 class="title">User Deleted Successfully</h1>
-
-            <div class="user-details">
-                <p><strong>First Name:</strong> ${user.firstName}</p>
-                <p><strong>Last Name:</strong> ${user.lastName}</p>
-                <p><strong>Email:</strong> ${user.email}</p>
-                <p><strong>Phone Number:</strong> ${user.phoneNumber}</p>
+        <div class="card profile-card">
+            <div class="profile-header">
+                <h1><i class="fas fa-user-circle"></i> User Profile</h1>
             </div>
 
-            <a href="${pageContext.request.contextPath}/users" class="back-btn">
-                <i class="fas fa-arrow-left"></i> Back to Users List
-            </a>
+            <c:if test="${not empty sessionScope.currentUser}">
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <span class="label">First Name</span>
+                        <span class="value">${sessionScope.currentUser.firstName}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Last Name</span>
+                        <span class="value">${sessionScope.currentUser.lastName}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Email</span>
+                        <span class="value">${sessionScope.currentUser.email}</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Phone Number</span>
+                        <span class="value">${sessionScope.currentUser.phoneNumber}</span>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <a href="<c:url value='/users/update/${sessionScope.currentUser.id}'/>" class="btn">
+                        <i class="fas fa-edit"></i> Edit Profile
+                    </a>
+                </div>
+            </c:if>
+
+            <c:if test="${empty sessionScope.currentUser}">
+                <div class="alert">
+                    <p>No user data found. Please log in.</p>
+                </div>
+            </c:if>
         </div>
     </div>
 </div>
 
 <script>
     function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        sidebar.classList.toggle('active');
+        document.getElementById('sidebar').classList.toggle('active');
     }
 </script>
 
