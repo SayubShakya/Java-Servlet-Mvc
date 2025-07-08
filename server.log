@@ -9643,3 +9643,10 @@ java.lang.IllegalStateException: Committed
 2025-07-08 15:28:09.495 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@470f1802{/,file:///C:/Users/acer/Desktop/login-register-crud-app/src/main/webapp/,AVAILABLE}
 2025-07-08 15:28:09.542 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@1ed4004b{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
 2025-07-08 15:28:09.544 INFO  org.eclipse.jetty.server.Server:439 - Started Server@6eceb130{STARTING}[11.0.15,sto=0] @965ms
+2025-07-08 15:41:29.824 INFO  org.eclipse.jetty.server.Server:384 - jetty-11.0.15; built: 2023-04-11T18:37:53.775Z; git: 5bc5e562c8d05c5862505aebe5cf83a61bdbcb96; jvm 17.0.12+8-LTS-286
+2025-07-08 15:41:30.228 INFO  org.eclipse.jetty.server.handler.ContextHandler.ROOT:2355 - Warning: No org.apache.tomcat.JarScanner set in ServletContext. Falling back to default JarScanner implementation.
+2025-07-08 15:41:30.343 INFO  org.apache.jasper.servlet.TldScanner:113 - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-08 15:41:30.373 INFO  org.eclipse.jetty.server.session.DefaultSessionIdManager:332 - Session workerName=node0
+2025-07-08 15:41:30.408 INFO  org.eclipse.jetty.server.handler.ContextHandler:907 - Started o.e.j.w.WebAppContext@cd3fee8{/,file:///C:/Users/acer/Desktop/projects/java/java-servlet-mvc/src/main/webapp/,AVAILABLE}
+2025-07-08 15:41:30.459 INFO  org.eclipse.jetty.server.AbstractConnector:376 - Started ServerConnector@1ed4004b{HTTP/1.1, (http/1.1)}{0.0.0.0:9090}
+2025-07-08 15:41:30.462 INFO  org.eclipse.jetty.server.Server:439 - Started Server@6eceb130{STARTING}[11.0.15,sto=0] @1168ms
