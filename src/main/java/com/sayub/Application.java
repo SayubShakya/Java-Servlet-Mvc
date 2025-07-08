@@ -1,18 +1,20 @@
 package com.sayub;
 
+import io.github.cdimascio.dotenv.Dotenv;
+import io.github.cdimascio.dotenv.DotenvEntry;
+import org.eclipse.jetty.ee10.webapp.WebAppContext;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.webapp.WebAppContext;
 
 public class Application {
     public static void main(String[] args) throws Exception {
-        Server server = new Server(9090);
-        WebAppContext context = new WebAppContext();
 
+        loadEnv();
+
+        Server server = new Server(Integer.parseInt(System.getProperty("APPLICATION_PORT", "9090")));
+        WebAppContext context = new WebAppContext();
+        context.setWar("target/root.war"); // <-- Must point to your webapp folder
         context.setContextPath("/");
-        context.setResourceBase("src/main/webapp");
-        // Include compiled classes for JSP support
-        context.setAttribute("org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern",
-                ".*/classes/|.*/jar/.*|.*/target/classes/");
+        context.setAttribute("org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern", ".*/classes/|.*/jar/.*|.*/target/classes/");
 
         // Required for JSPs
         context.setAttribute("javax.servlet.context.tempdir", new java.io.File("target/tmp"));
@@ -23,5 +25,13 @@ public class Application {
         server.setHandler(context);
         server.start();
         server.join();
+    }
+
+    private static void loadEnv() {
+        Dotenv dotenv = Dotenv.load();
+
+        for (DotenvEntry entry : dotenv.entries()) {
+            System.setProperty(entry.getKey(), entry.getValue());
+        }
     }
 }

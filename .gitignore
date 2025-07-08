@@ -43,3 +43,9 @@ build/
 
 ### Windows ###
 Thumbs.db
+
+.env
+
+server.log
+
+server.*

@@ -9,9 +9,9 @@ import java.util.Optional;
 
 public class DatabaseConnector {
 
-    private static final String URL = System.getenv().getOrDefault("DB_URL", "jdbc:mysql://localhost:3306/crud");
-    private static final String USER = System.getenv().getOrDefault("DB_USER", "root");
-    private static final String PASSWORD = System.getenv().getOrDefault("DB_PASS", "9828807288");
+    private static final String URL = System.getProperty("DB_URL", "jdbc:mysql://localhost:3306/xxx");
+    private static final String USER = System.getProperty("DB_USER", "root");
+    private static final String PASSWORD = System.getProperty("DB_PASS", "xxxxxxxx");
 
     static {
         try {
