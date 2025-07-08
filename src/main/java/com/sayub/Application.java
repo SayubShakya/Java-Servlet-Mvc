@@ -12,7 +12,7 @@ public class Application {
 
         Server server = new Server(Integer.parseInt(System.getProperty("APPLICATION_PORT", "9090")));
         WebAppContext context = new WebAppContext();
-        context.setWar("target/root.war"); // <-- Must point to your webapp folder
+        context.setWar("target/root.war");
         context.setContextPath("/");
         context.setAttribute("org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern", ".*/classes/|.*/jar/.*|.*/target/classes/");
 
