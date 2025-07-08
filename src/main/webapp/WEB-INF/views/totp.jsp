@@ -88,7 +88,7 @@
             <input type="text" maxlength="1" id="otp6" required>
         </div>
         <input type="hidden" name="totp" id="otp" />
-        <input type="hidden" name="email" value="${requestScope.email}" />
+        <input type="hidden" name="email" value="${sessionScope.email}" />
         <button type="submit" class="verify-btn">Verify</button>
     </form>
     <div class="note">
@@ -97,20 +97,32 @@
 </div>
 
 <script>
-    function moveNext(current, nextId) {
-        if (current.value.length === 1) {
-            document.getElementById(nextId)?.focus();
-        }
-    }
+    // Autofocus on first input
+    window.onload = function () {
+        document.getElementById("otp1").focus();
+    };
+
+    // Move to next box if input filled, or back if backspace pressed on empty
+    const inputs = document.querySelectorAll('.otp-boxes input');
+    inputs.forEach((input, index) => {
+        input.addEventListener('input', () => {
+            if (input.value.length === 1 && index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            }
+        });
+
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Backspace') {
+                if (input.value === '' && index > 0) {
+                    inputs[index - 1].focus();
+                    inputs[index - 1].value = '';
+                }
+            }
+        });
+    });
 
     function gatherOTP() {
-        const otp =
-            document.getElementById("otp1").value +
-            document.getElementById("otp2").value +
-            document.getElementById("otp3").value +
-            document.getElementById("otp4").value +
-            document.getElementById("otp5").value +
-            document.getElementById("otp6").value;
+        const otp = Array.from(inputs).map(input => input.value).join('');
         document.getElementById("otp").value = otp;
         return true;
     }

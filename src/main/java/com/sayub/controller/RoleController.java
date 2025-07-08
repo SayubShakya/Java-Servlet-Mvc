@@ -73,11 +73,6 @@ public class RoleController extends Controller {
             String pathInfo = request.getPathInfo();
             String name = request.getParameter("name");
 
-            if (name == null || name.trim().isEmpty()) {
-                throw new ApplicationException(HttpServletResponse.SC_BAD_REQUEST,
-                        "Role name is required");
-            }
-
             if (pathInfo != null && pathInfo.startsWith("/update/")) {
                 int id = extractIdFromPath(pathInfo.substring("/update".length()));
                 UpdateRoleRequest updateRoleRequest = new UpdateRoleRequest(id, name);

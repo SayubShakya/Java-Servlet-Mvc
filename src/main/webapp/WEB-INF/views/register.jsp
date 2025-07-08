@@ -24,8 +24,8 @@
             text-align: center;
         }
         .register-box img {
-            width: 80px;
-            height: 80px;
+            width: 300px;
+            height: 300px;
             margin-bottom: 1rem;
         }
         .register-box h2 {

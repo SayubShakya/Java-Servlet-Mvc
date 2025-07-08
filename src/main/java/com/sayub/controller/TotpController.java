@@ -50,10 +50,9 @@ public class TotpController extends Controller {
 
             HttpSession session = request.getSession();
 
-            session.setAttribute("email", email);
             session.setAttribute("currentUser", user);
 
-            redirect(response, "dashboard");
+            redirect(request, response, "dashboard");
         });
     }
 }

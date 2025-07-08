@@ -30,7 +30,7 @@ public class AuthFilter implements Filter {
             return;
         }
 
-        boolean loggedIn = (session != null && session.getAttribute("email") != null);
+        boolean loggedIn = (session != null && session.getAttribute("currentUser") != null);
 
         if(loggedIn && isLoginRequest) {
             res.sendRedirect("dashboard");

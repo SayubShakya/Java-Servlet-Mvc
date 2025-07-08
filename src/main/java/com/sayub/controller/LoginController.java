@@ -11,6 +11,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -49,13 +50,12 @@ public class LoginController extends Controller {
             User user = userRepository.findByEmail(email)
                     .orElseThrow(() -> new RuntimeException("User not found"));
 
-            request.getSession().setAttribute("loggedInUser", user);
+            HttpSession session = request.getSession();
 
-            String otpCode = TOTPUtil.getTOTPCode(user.getTotpSecretKey());
-            System.out.println("Generated OTP for user " + email + ": " + otpCode);
+            session.setAttribute("email", email);
+            session.setAttribute("currentUser", user);
 
-            request.setAttribute("email", email);
-            view("totp", request, response);
+            redirect(request, response, "dashboard");
         });
     }
 }

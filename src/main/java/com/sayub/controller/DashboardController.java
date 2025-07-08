@@ -16,7 +16,7 @@ public class DashboardController extends Controller {
         handleResponse(request, response, () -> {
             try {
                 HttpSession session = request.getSession(false);
-                User user = (User) session.getAttribute("loggedInUser");
+                User user = (User) session.getAttribute("currentUser");
 
                 request.setAttribute("user", user);
 

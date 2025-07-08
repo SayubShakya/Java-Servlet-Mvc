@@ -209,108 +209,29 @@
             font-size: 0.9rem;
             transition: all 0.3s ease;
         }
-
         .edit-btn {
             background-color: rgba(67, 97, 238, 0.1);
             color: var(--primary);
         }
-
         .edit-btn:hover {
             background-color: rgba(67, 97, 238, 0.2);
         }
-
         .delete-btn {
             background-color: rgba(247, 37, 133, 0.1);
             color: var(--danger);
-        }
-
-        .delete-btn:hover {
-            background-color: rgba(247, 37, 133, 0.2);
-        }
-
-        .empty-state {
-            text-align: center;
-            padding: 3rem;
-            color: #777;
-            width: 100%;
-            max-width: 1200px;
-        }
-
-        .empty-state i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #ccc;
-        }
-
-        .action-buttons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 1rem;
-            width: 100%;
-        }
-
-        .dashboard-btn {
+            border: none;
+            background: none;
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.9rem;
+            border-radius: 4px;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
-            padding: 0.7rem 1.3rem;
-            background-color: #6c757d;
-            color: white;
-            text-decoration: none;
-            border-radius: var(--border-radius);
-            font-weight: 500;
+            gap: 5px;
             transition: all 0.3s ease;
         }
-
-        .dashboard-btn:hover {
-            background-color: #5a6268;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow);
-        }
-
-        @media (max-width: 768px) {
-            .sidebar {
-                position: fixed;
-                top: 0;
-                left: -260px;
-                height: 100vh;
-                z-index: 100;
-                background: white;
-            }
-
-            .sidebar.active {
-                left: 0;
-            }
-            .sidebar a.active {
-                background-color: #e6f0ff;
-                color: var(--primary);
-                font-weight: 500;
-            }
-
-            .container {
-                flex-direction: column;
-            }
-
-            .main {
-                padding: 1rem;
-                margin-top: 70px;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
-            }
-        }
-
-        @media (min-width: 769px) {
-            .mobile-menu-btn {
-                display: none;
-            }
+        .delete-btn:hover {
+            background-color: rgba(247, 37, 133, 0.2);
         }
     </style>
 </head>
@@ -378,11 +299,11 @@
                             <td>${user.phoneNumber}</td>
                             <td>${user.email}</td>
                             <td>
-                                <a class="action-btn edit-btn" href="${pageContext.request.contextPath}/users/update/${user.id}">
+                                <a class="action-btn edit-btn" href="${pageContext.request.contextPath}/users/edit/${user.id}">
                                     <i class="fas fa-edit"></i> Edit
                                 </a>
-                                <a class="action-btn delete-btn" href="${pageContext.request.contextPath}/users/delete/${user.id}">
-                                    <i class="fas fa-trash-alt"></i> Delete
+                                <a class="action-btn edit-btn" href="/users/delete/${user.id}">
+                                    <i class="fas fa-edit"></i> Delete
                                 </a>
                             </td>
                         </tr>
