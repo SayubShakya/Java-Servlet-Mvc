@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebFilter(urlPatterns = {"/*"}) // Add more as needed
+@WebFilter(urlPatterns = {"/*"})
 public class AuthFilter implements Filter {
 
     public void init(FilterConfig filterConfig) throws ServletException {
