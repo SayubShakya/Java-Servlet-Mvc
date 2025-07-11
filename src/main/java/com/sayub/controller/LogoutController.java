@@ -11,8 +11,7 @@ import java.io.IOException;
 @WebServlet("logout")
 public class LogoutController  extends Controller {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.removeAttribute("currentUser");
         session.invalidate();
