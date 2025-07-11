@@ -6,7 +6,6 @@ import com.sayub.repository.UserRepository;
 import com.sayub.repository.impl.UserRepositoryImpl;
 import com.sayub.service.AuthService;
 import com.sayub.service.impl.AuthServiceImpl;
-import com.sayub.util.TOTPUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -31,16 +30,12 @@ public class LoginController extends Controller {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         handleResponse(request, response, () -> {
-            try {
-                view("login", request, response);
-            } catch (Exception e) {
-                log.error("Exception: ", e);
-            }
+            view("common/login", request, response);
         });
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         handleResponse(request, response, () -> {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
@@ -51,7 +46,6 @@ public class LoginController extends Controller {
                     .orElseThrow(() -> new RuntimeException("User not found"));
 
             HttpSession session = request.getSession();
-
             session.setAttribute("email", email);
             session.setAttribute("currentUser", user);
 

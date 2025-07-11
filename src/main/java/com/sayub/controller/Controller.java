@@ -10,17 +10,17 @@ import org.apache.log4j.Logger;
 import java.io.IOException;
 
 public abstract class Controller extends HttpServlet {
+    private static final Logger log = Logger.getLogger(Controller.class);
     protected String viewPrefix = "/WEB-INF/views/";
     protected String viewSuffix = ".jsp";
-    private static final Logger log = Logger.getLogger(Controller.class);
 
-    protected void view(String page, HttpServletRequest request, HttpServletResponse response) {
+    protected void view(String path, HttpServletRequest request, HttpServletResponse response) {
         try {
-            request.getRequestDispatcher(viewPrefix + page + viewSuffix).forward(request, response);
+            request.getRequestDispatcher(viewPrefix + path + viewSuffix).forward(request, response);
         } catch (ServletException e) {
-            System.out.println("ServletException: " + e);
+            log.error("ServletException: ", e);
         } catch (IOException e) {
-            System.out.println("IOException: " + e);
+            log.error("IOException: ", e);
         }
     }
 
@@ -29,7 +29,7 @@ public abstract class Controller extends HttpServlet {
             String contextPath = request.getContextPath();
             response.sendRedirect(contextPath + "/" + page);
         } catch (IOException e) {
-            System.out.println("IOException: " + e);
+            log.error("IOException: ", e);
         }
     }
 
@@ -38,11 +38,10 @@ public abstract class Controller extends HttpServlet {
             task.run();
         } catch (ApplicationException e) {
             log.error("ApplicationException: ", e);
-            view("500", request, response);
+            view("common/500", request, response);
         } catch (Exception e) {
             log.error("Exception: ", e);
-            view("500", request, response);
+            view("common/500", request, response);
         }
     }
-
 }

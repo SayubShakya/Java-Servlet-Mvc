@@ -294,10 +294,6 @@
            class="${pageContext.request.requestURI.endsWith('/dashboard.jsp') || pageContext.request.requestURI.endsWith('/dashboard') ? 'active' : ''}">
             <i class="fas fa-tachometer-alt"></i> Dashboard
         </a>
-        <a href="${pageContext.request.contextPath}/profile"
-           class="${pageContext.request.requestURI.endsWith('/profile') ? 'active' : ''}">
-            <i class="fas fa-user-circle"></i> Profile
-        </a>
         <a href="${pageContext.request.contextPath}/users"
            class="${pageContext.request.requestURI.endsWith('/users') ? 'active' : ''}">
             <i class="fas fa-users"></i> Users

@@ -199,10 +199,6 @@
            class="${pageContext.request.requestURI.endsWith('/dashboard') ? 'active' : ''}">
             <i class="fas fa-tachometer-alt"></i> Dashboard
         </a>
-        <a href="${pageContext.request.contextPath}/profile"
-           class="${pageContext.request.requestURI.contains('/profile') ? 'active' : ''}">
-            <i class="fas fa-user-circle"></i> Profile
-        </a>
         <a href="${pageContext.request.contextPath}/logout">
             <i class="fas fa-sign-out-alt"></i> Logout
         </a>

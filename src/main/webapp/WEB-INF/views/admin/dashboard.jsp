@@ -203,10 +203,6 @@
            class="${pageContext.request.requestURI.contains('/users') ? 'active' : ''}">
             <i class="fas fa-users"></i> Users
         </a>
-        <a href="${pageContext.request.contextPath}/profile"
-           class="${pageContext.request.requestURI.contains('/profile') ? 'active' : ''}">
-            <i class="fas fa-user-circle"></i> Profile
-        </a>
         <a href="${pageContext.request.contextPath}/logout">
             <i class="fas fa-sign-out-alt"></i> Logout
         </a>

@@ -50,7 +50,7 @@ public class RegisterController extends Controller {
             }
             request.setAttribute("qr", base64QR);
             request.setAttribute("secretKey", secretKey);
-            view("register", request, response);
+            view("common/register", request, response);
         });
     }
 
@@ -69,7 +69,7 @@ public class RegisterController extends Controller {
             authService.register(new RegisterUserRequest(
                     firstName, lastName, phoneNo, email,
                     password, secretKey, totpCode, roleId));
-            view("login", request, response);
+            view("common/login", request, response);
         });
     }
 }

@@ -26,8 +26,7 @@ public class UserController extends Controller {
     @Override
     public void init() throws ServletException {
         log.info("UserServlet init");
-        UserRepository userRepository = new UserRepositoryImpl();
-        this.userService = new UserServiceImpl(userRepository);
+        this.userService = new UserServiceImpl(new UserRepositoryImpl());
     }
 
     @Override
@@ -38,97 +37,76 @@ public class UserController extends Controller {
             if (pathInfo == null || pathInfo.equals("/")) {
                 getAllUsers(request, response);
             } else if (pathInfo.startsWith("/edit/")) {
-                int id = extractIdFromPath(pathInfo.substring("/edit/".length()));
-                editUser(request, response, id);
+                editUser(request, response, extractIdFromPath(pathInfo.substring(6)));
             } else if (pathInfo.startsWith("/delete/")) {
-                deleteUser(request, response, pathInfo);
+                deleteUser(request, response, extractIdFromPath(pathInfo.substring(8)));
             } else {
-                getUserById(request, response, pathInfo);
+                getUserById(request, response, extractIdFromPath(pathInfo));
             }
         });
     }
 
-    private void getUserById(HttpServletRequest request, HttpServletResponse response, String pathInfo) {
-        int id = extractIdFromPath(pathInfo);
+    private void getUserById(HttpServletRequest request, HttpServletResponse response, int id) {
         User user = userService.getUserById(id);
-
         request.setAttribute("user", new UserResponse(user));
-        view("users", request, response);
+        view("admin/users", request, response);
     }
 
-    private void deleteUser(HttpServletRequest request, HttpServletResponse response, String pathInfo) {
-        int id = extractIdFromPath(pathInfo.substring("/delete/".length()));
+    private void deleteUser(HttpServletRequest request, HttpServletResponse response, int id) {
         userService.deleteUser(id);
         redirect(request, response, "users");
     }
 
     private void editUser(HttpServletRequest request, HttpServletResponse response, int id) {
         User user = userService.getUserById(id);
-
-        UpdateUserRequest updateRequest = new UpdateUserRequest(
+        request.setAttribute("user", new UpdateUserRequest(
                 user.getId(),
                 user.getEmail(),
                 user.getFirstName(),
                 user.getLastName(),
                 user.getPhoneNumber()
-        );
-
-        request.setAttribute("user", updateRequest);
-        view("updateUser", request, response);
+        ));
+        view("common/updateUser", request, response);
     }
 
     private void getAllUsers(HttpServletRequest request, HttpServletResponse response) {
-        List<UserResponse> userResponses = userService.getAllUsers().stream()
+        List<UserResponse> users = userService.getAllUsers().stream()
                 .map(UserResponse::new)
                 .collect(Collectors.toList());
-
-        request.setAttribute("users", userResponses);
-        view("users", request, response);
+        request.setAttribute("users", users);
+        view("admin/users", request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         handleResponse(request, response, () -> {
-            String pathInfo = request.getPathInfo();
-
-            if (pathInfo != null && pathInfo.startsWith("/update/")) {
-                int id = extractIdFromPath(pathInfo.substring("/update/".length()));
-
-                String firstName = request.getParameter("firstName");
-                String lastName = request.getParameter("lastName");
-                String phoneNumber = request.getParameter("phoneNumber");
-                String email = request.getParameter("email");
-
-                UpdateUserRequest updateUserRequest = new UpdateUserRequest(
+            if (request.getPathInfo().startsWith("/update/")) {
+                int id = extractIdFromPath(request.getPathInfo().substring(8));
+                User updatedUser = userService.updateUser(id, new UpdateUserRequest(
                         id,
-                        email,
-                        firstName,
-                        lastName,
-                        phoneNumber
-                );
-
-                User updatedUser = userService.updateUser(id, updateUserRequest);
+                        request.getParameter("email"),
+                        request.getParameter("firstName"),
+                        request.getParameter("lastName"),
+                        request.getParameter("phoneNumber")
+                ));
 
                 request.setAttribute("user", new UserResponse(updatedUser));
                 request.setAttribute("successMessage", "User updated successfully");
-                view("updateUser", request, response);
-
+                view("common/updateUser", request, response);
             }
         });
     }
 
     private int extractIdFromPath(String pathInfo) {
-        if (pathInfo == null || pathInfo.equals("/") || pathInfo.trim().isEmpty()) {
+        if (pathInfo == null || pathInfo.trim().isEmpty()) {
             throw new ApplicationException(HttpServletResponse.SC_BAD_REQUEST,
-                    "User ID is missing in the URL path.");
+                    "User ID is missing in URL path");
         }
         try {
-            String idStr = pathInfo.startsWith("/") ? pathInfo.substring(1) : pathInfo;
-            idStr = idStr.trim().replaceAll("/", "");
-            return Integer.parseInt(idStr);
+            return Integer.parseInt(pathInfo.replaceAll("/", "").trim());
         } catch (NumberFormatException e) {
             throw new ApplicationException(HttpServletResponse.SC_BAD_REQUEST,
-                    "Invalid User ID format in URL path: " + pathInfo);
+                    "Invalid User ID format: " + pathInfo);
         }
     }
 }

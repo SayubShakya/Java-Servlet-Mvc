@@ -112,7 +112,7 @@ public class RoleController extends Controller {
 
                 request.setAttribute("role", new RoleResponse(createdRole));
                 request.setAttribute("successMessage", "Role created successfully");
-                view("createRole", request, response);
+                view("common/login", request, response);
             }
         });
     }

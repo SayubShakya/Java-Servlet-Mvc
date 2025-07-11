@@ -22,20 +22,20 @@ public class DashboardController extends Controller {
 
                 switch (user.getRoleId()) {
                     case 1:
-                        view("dashboard", request, response);
+                        view("admin/dashboard", request, response);
                         break;
                     case 2:
-                        view("editorDashboard", request, response);
+                        view("editor/editorDashboard", request, response);
                         break;
                     case 3:
-                        view("viewerDashboard", request, response);
+                        view("viewer/viewerDashboard", request, response);
                         break;
                     default:
                         response.sendError(HttpServletResponse.SC_FORBIDDEN, "Unauthorized access");
                 }
             } catch (Exception e) {
                 log.error("Exception in DashboardController: ", e);
-                view("500", request, response);
+                view("common/500", request, response);
             }
         });
     }

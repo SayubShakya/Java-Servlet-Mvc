@@ -27,32 +27,29 @@ public class TotpController extends Controller {
         this.authService = new AuthServiceImpl(userRepository);
     }
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         handleResponse(request, response, () -> {
-            try {
-                view("totp", request, response);
-            } catch (Exception e) {
-                log.error("Exception: ", e);
-            }
+            view("common/totp", request, response);
         });
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
         handleResponse(request, response, () -> {
-
             String email = request.getParameter("email");
             String totp = request.getParameter("totp");
 
-            User user = authService.validateTotp(new TotpRequest(email, totp));
-
-            HttpSession session = request.getSession();
-
-            session.setAttribute("currentUser", user);
-
-            redirect(request, response, "dashboard");
+            try {
+                User user = authService.validateTotp(new TotpRequest(email, totp));
+                HttpSession session = request.getSession();
+                session.setAttribute("currentUser", user);
+                redirect(request, response, "dashboard");
+            } catch (Exception e) {
+                log.error("TOTP validation failed for email: " + email, e);
+                request.setAttribute("error", "Invalid TOTP code");
+                doGet(request, response);
+            }
         });
     }
 }

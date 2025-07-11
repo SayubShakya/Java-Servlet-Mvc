@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,7 +79,7 @@
 <body>
 <div class="login-container">
     <h2>Login</h2>
-    <form action="/login" method="post">
+    <form action="${pageContext.request.contextPath}/login" method="post">
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required />
@@ -91,7 +90,7 @@
         </div>
         <button type="submit" class="login-btn">Login</button>
     </form>
-    <div class="note">Don't have an account? <a href="/register">Register</a></div>
+    <div class="note">Don't have an account? <a href="${pageContext.request.contextPath}/register">Register</a></div>
 </div>
 </body>
 </html>
