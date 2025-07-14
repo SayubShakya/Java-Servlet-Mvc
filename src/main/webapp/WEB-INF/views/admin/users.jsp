@@ -243,7 +243,7 @@
     </button>
     <div class="user-info">
         <i class="fas fa-user-circle"></i>
-        <span>${sessionScope.loggedInUser.email}</span>
+        <span>${user.email}</span>
     </div>
 </div>
 
